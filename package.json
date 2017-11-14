@@ -1,0 +1,16 @@
+{
+	"name": "node-red-denon-avr",
+	"version": "0.0.0",
+	"author": {
+		"name": "Florian Bachmann"
+	},
+	"dependencies": {
+		"denon-client": "^0.2.3"
+	},
+	"node-red": {
+		"nodes": {
+			"denon-avr-config": "./lib/node-red-denon-avr-config.js",
+			"denon-avr": "./lib/node-red-denon-avr.js"
+		}
+	}
+}

@@ -1,0 +1,197 @@
+<script type="text/javascript">
+    function registerNode(type, name) {
+        RED.nodes.registerType(type, {
+            category: 'Denon AVR',
+            color: '#a6bbcf',
+            defaults: {
+                name: {
+                    value: name || type
+                },
+                avr: {
+                    value: '',
+                    type: 'denon-avr-config'
+                }
+            },
+            inputs: 1,
+            outputs: 1,
+            label: function () {
+                return this.name || name || type
+            }
+        });
+    }
+</script>
+
+<script type="text/javascript">
+    registerNode('get-display');
+    registerNode('get-input');
+    registerNode('get-mute');
+    registerNode('get-power');
+    registerNode('get-volume');
+    registerNode('set-display');
+    registerNode('set-input');
+    registerNode('set-power');
+    registerNode('set-volume');
+    registerNode('set-mute');
+</script>
+
+<!-- get display -->
+<script type="text/x-red" data-template-name="get-display">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-avr"><i class="icon-bookmark"></i> AVR</label>
+        <input type="text" id="node-input-avr">
+    </div>
+</script>
+
+<!-- get input -->
+<script type="text/x-red" data-template-name="get-input">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-avr"><i class="icon-bookmark"></i> AVR</label>
+        <input type="text" id="node-input-avr">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="get-input">
+    <p>Get selected input source from Denon AVR.</p>
+</script>
+
+<!-- get mute -->
+<script type="text/x-red" data-template-name="get-mute">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-avr"><i class="icon-bookmark"></i> AVR</label>
+        <input type="text" id="node-input-avr">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="get-mute">
+    <p>Get selected input source from Denon AVR.</p>
+</script>
+
+<!-- get power -->
+<script type="text/x-red" data-template-name="get-power">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-avr"><i class="icon-bookmark"></i> AVR</label>
+        <input type="text" id="node-input-avr">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="get-power">
+    <p>Get selected input source from Denon AVR.</p>
+</script>
+
+<!-- get volume -->
+<script type="text/x-red" data-template-name="get-volume">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-avr"><i class="icon-bookmark"></i> AVR</label>
+        <input type="text" id="node-input-avr">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="get-volume">
+    <p>Get selected input source from Denon AVR.</p>
+</script>
+
+<!-- set display -->
+<script type="text/x-red" data-template-name="set-display">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-avr"><i class="icon-bookmark"></i> AVR</label>
+        <input type="text" id="node-input-avr">
+    </div>
+</script>
+
+<!-- set input -->
+<script type="text/x-red" data-template-name="set-input">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-avr"><i class="icon-bookmark"></i> AVR</label>
+        <input type="text" id="node-input-avr">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="set-input">
+    <p>Get selected input source from Denon AVR.</p>
+</script>
+
+<!-- set power -->
+<script type="text/x-red" data-template-name="set-power">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-avr"><i class="icon-bookmark"></i> AVR</label>
+        <input type="text" id="node-input-avr">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="set-power">
+    <p>Get selected input source from Denon AVR.</p>
+</script>
+
+<!-- set volume -->
+<script type="text/x-red" data-template-name="set-volume">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-avr"><i class="icon-bookmark"></i> AVR</label>
+        <input type="text" id="node-input-avr">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="set-volume">
+    <p>Get selected input source from Denon AVR.</p>
+</script>
+
+<!-- set mute -->
+<script type="text/x-red" data-template-name="set-mute">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-avr"><i class="icon-bookmark"></i> AVR</label>
+        <input type="text" id="node-input-avr">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="set-mute">
+    <p>Get selected input source from Denon AVR.</p>
+</script>
